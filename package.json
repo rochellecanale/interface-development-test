@@ -1,0 +1,28 @@
+{
+	"name": "interface-development-test",
+	"version": "1.0.0",
+	"description": "This is a repo for the interface development.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rochellecanale/interface-development-test.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rochellecanale/interface-development-test/issues"
+	},
+	"homepage": "https://github.com/rochellecanale/interface-development-test#readme",
+	"devDependencies": {
+		"@vitejs/plugin-legacy": "^7.2.1",
+		"sass": "^1.93.3",
+		"vite": "^7.2.2"
+	}
+}
