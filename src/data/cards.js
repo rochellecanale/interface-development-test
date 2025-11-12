@@ -8,17 +8,17 @@ export const cardsData = [
 			{
 				src: image1Url,
 				title: 'RED',
-				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices lectus sapien, nec mollis purus varius ac. Duis lacinia aliquet mauris, vitae cursus elit sodales sit amet. Mauris vitae finibus libero. '
+				description: 'Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.'
 			},
 			{
 				src: image2Url,
 				title: 'Green',
-				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices lectus sapien, nec mollis purus varius ac. Duis lacinia aliquet mauris, vitae cursus elit sodales sit amet. Mauris vitae finibus libero. '
+				description: 'Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours.'
 			},
 			{
 				src: image3Url,
 				title: 'WHITE',
-				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices lectus sapien, nec mollis purus varius ac. Duis lacinia aliquet mauris, vitae cursus elit sodales sit amet. Mauris vitae finibus libero. '
+				description: 'White foods evoke memories of salt and salty flavours, driving the expectation of savoury treat.'
 			},
 		]
 	}
