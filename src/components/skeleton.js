@@ -44,3 +44,16 @@ export function gallerySkeleton () {
 		]
 	});
 };
+
+export function cardsSkeleton() {
+	return createSkeleton({
+		layout: [
+			{
+				className: 'cards-thumbs',
+				shapes: Array.from({ length: 3 }).map(() => ({
+					type: 'rect',  
+				})),
+			},
+		],
+	});
+}
