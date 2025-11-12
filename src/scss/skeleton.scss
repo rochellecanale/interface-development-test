@@ -1,0 +1,42 @@
+.skeleton-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+
+	.skeleton-section {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.skeleton {
+		background: linear-gradient(to right,
+				rgba(208, 208, 208, 0.5) 0%,
+				rgba(224, 224, 224, 0.5) 50%,
+				rgba(208, 208, 208, 0.5) 100%);
+		background-size: 400px 100%;
+		animation: shimmer 1.5s infinite linear;
+	}
+
+	.skeleton.rect {
+		display: inline-block;
+	}
+
+	.skeleton.square {
+		display: inline-block;
+	}
+
+	@media (max-width: 480px) {
+		flex-direction: column;
+	}
+
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -400px 0;
+	}
+
+	100% {
+		background-position: 400px 0;
+	}
+}

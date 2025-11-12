@@ -1,6 +1,6 @@
-import image1Url from '../assets/images/gallery1-min.jpg';
-import image2Url from '../assets/images/gallery2-min.jpg';
-import image3Url from '../assets/images/gallery3-min.jpg';
+import image1Url from '../assets/images/gallery1-min.webp';
+import image2Url from '../assets/images/gallery2-min.webp';
+import image3Url from '../assets/images/gallery3-min.webp';
 
 export const galleryData = [
 	{

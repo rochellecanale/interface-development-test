@@ -1,62 +1,7 @@
-import '../scss/gallery.scss';
-import { truncateByWords } from '../util/helper.js';
-
-const galleryBlockProps = {
-	images: [],
-	title: '',
-	description: '',
-	instruction: {
-		title: '',
-		description: ''
-	}
-};
-
-function createModal(src, alt) {
-	const modalOverlay = document.createElement('div');
-	modalOverlay.className = 'image-modal-overlay';
-	modalOverlay.setAttribute('role', 'dialog');
-	modalOverlay.setAttribute('aria-modal', 'true');
-	modalOverlay.setAttribute('tabindex', '-1');
-
-	const modalContent = document.createElement('div');
-	modalContent.className = 'image-modal-content';
-
-	const modalImage = document.createElement('img');
-	modalImage.src = src;
-	modalImage.alt = alt;
-	modalImage.className = 'modal-image';
-
-	modalContent.appendChild(modalImage);
-	modalOverlay.appendChild(modalContent);
-
-	const closeModal = () => {
-		modalOverlay.classList.remove('open');
-		setTimeout(() => {
-			modalOverlay.remove();
-		}, 300);
-	};
-
-	// Click outside to close
-	modalOverlay.addEventListener('click', (event) => {
-		if (event.target === modalOverlay) {
-			closeModal();
-		}
-	});
-
-	// Keyboard accessibility
-	modalOverlay.addEventListener('keydown', (event) => {
-		if (event.key === 'Escape') {
-			closeModal();
-		}
-	});
-
-	// Set focus when modal opens
-	requestAnimationFrame(() => {
-		modalOverlay.focus();
-	});
-
-	return modalOverlay;
-}
+import '../../scss/gallery.scss';
+import { truncateByWords } from '../../util/helper.js';
+import { galleryBlockProps } from '../../props/gallery.js';
+import { createModal } from './galleyModal.js';
 
 export function galleryBlock({ images, title, description, instruction } = galleryBlockProps) {
 	if (!images.length || !title || !description || !instruction) return null;
@@ -76,16 +21,15 @@ export function galleryBlock({ images, title, description, instruction } = galle
 		img.src = image.src;
 		img.alt = image.alt || title;
 		img.className = 'lazyload';
-		img.setAttribute('tabindex', '0'); // keyboard focusable
-		img.setAttribute('role', 'button'); // inform screen readers
+		img.setAttribute('tabindex', '0');
+		img.setAttribute('role', 'button');
 
 		img.addEventListener('click', () => {
-			const modal = createModal(img.src, img.alt);
+			const modal = createModal(images, images.indexOf(image));
 			document.body.appendChild(modal);
 			requestAnimationFrame(() => modal.classList.add('open'));
 		});
 
-		// Keyboard support for opening modal
 		img.addEventListener('keydown', (event) => {
 			if (event.key === 'Enter' || event.key === ' ') {
 				event.preventDefault();
@@ -130,4 +74,4 @@ export function galleryBlock({ images, title, description, instruction } = galle
 	container.appendChild(rightColumn);
 
 	return container;
-}
+};
