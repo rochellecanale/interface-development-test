@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   root: path.resolve(__dirname),
-  base: './', 
+  base: '/', 
   plugins: [
     legacy({
       targets: ['defaults', 'not IE 11'],
