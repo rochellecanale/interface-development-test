@@ -24,5 +24,8 @@
 		"@vitejs/plugin-legacy": "^7.2.1",
 		"sass": "^1.93.3",
 		"vite": "^7.2.2"
+	},
+	"dependencies": {
+		"lazysizes": "^5.3.2"
 	}
 }
