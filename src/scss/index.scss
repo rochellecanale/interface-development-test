@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* ==============================
 Variables
 ============================== */
 :root {
 	--primary-color: #4f46e5;
 	--secondary-color: #facc15;
-	--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	--base-spacing: 1rem;
 	--border-radius: 0.5rem;
+
+	/* Font families */
+	--font-heading: 'Montserrat', sans-serif;
+	--font-body: 'Work Sans', sans-serif;
+	--font-subheading: 'Montserrat', sans-serif;
+
+	/* Optional weights */
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+	--weight-bold: 700;
 }
 
 /* ==============================
@@ -20,11 +32,20 @@ Global Reset / Base Styles
 	box-sizing: border-box;
 }
 
-body {
-	font-family: var(--font-family);
+body, p {
+	font-family: var(--font-body);
 	background-color: #0e1316;
 	color: #fff;
 	line-height: 1.6;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading), sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 /* ==============================

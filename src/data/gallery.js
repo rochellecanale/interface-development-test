@@ -1,16 +1,20 @@
+import image1Url from '../assets/images/gallery1-min.jpg';
+import image2Url from '../assets/images/gallery2-min.jpg';
+import image3Url from '../assets/images/gallery3-min.jpg';
+
 export const galleryData = [
 	{
 		images: [
 			{
-				src: 'https://placehold.co/300x600',
+				src: image1Url,
 				alt: 'Image 1'
 			},
 			{
-				src: 'https://placehold.co/300x300',
+				src: image2Url,
 				alt: 'Image 2'
 			},	
 			{
-				src: 'https://placehold.co/300x300',
+				src: image3Url,
 				alt: 'Image 3'
 			}
 		],
