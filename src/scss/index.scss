@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--primary-color: #4f46e5;
+	--secondary-color: #facc15;
+	--base-spacing: 1rem;
+	--border-radius: 0.5rem;
+
+	/* Font families */
+	--font-heading: 'Montserrat', sans-serif;
+	--font-body: 'Work Sans', sans-serif;
+	--font-subheading: 'Montserrat', sans-serif;
+
+	/* Optional weights */
+	--weight-regular: 400;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, p {
+	font-family: var(--font-body);
+	background-color: #0e1316;
+	color: #fff;
+	line-height: 1.6;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading), sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: var(--base-spacing);
+	@media (max-width: 480px) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+#app {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
