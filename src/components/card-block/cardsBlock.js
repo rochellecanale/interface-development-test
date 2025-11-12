@@ -18,6 +18,9 @@ export function cardsBlock({ title = 'TASTE THE COLOURS', cards = [] } = {}) {
 	cards.forEach(card => {
 		const cardEl = document.createElement('div');
 		cardEl.className = 'card';
+		cardEl.setAttribute('role', 'button');       
+		cardEl.setAttribute('tabindex', '0');        
+		cardEl.setAttribute('aria-label', `${card.title}: ${card.description}`); 
 
 		const img = document.createElement('img');
 		img.src = card.src;
@@ -30,12 +33,26 @@ export function cardsBlock({ title = 'TASTE THE COLOURS', cards = [] } = {}) {
 
 		const cardDesc = document.createElement('p');
 		cardDesc.textContent = window.innerWidth <= 480 ? card.description : truncateByWords(card.description, 40);
-
-
 		cardEl.appendChild(cardDesc);
 
 		cardsWrapper.appendChild(cardEl);
+
+		const logCard = () => {
+			console.log({
+				src: card.src,
+				title: card.title,
+				description: card.description
+			});
+		};
+
+		cardEl.addEventListener('click', logCard);
+		cardEl.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				logCard();
+			}
+		});
 	});
 
 	return container;
-}
+};
