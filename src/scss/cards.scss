@@ -28,6 +28,9 @@
 		text-align: center;
 		width: 100%;
 		max-width: 360px;
+		&:hover {
+			cursor: pointer;
+		}
 
 		img {
 			width: 100%;
